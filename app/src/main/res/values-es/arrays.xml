@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="notes">
+            <item> Puedes guardar el filtrado de satélites desde la ventana de Filtrado!!. </item>
+            
+        <item>  Mira en la opción de menú </item>
+		<item>	Más ... -> ¿Como hacerlo? </item> 
+		<item>	para saber más !. </item>
+     </string-array>
+</resources>

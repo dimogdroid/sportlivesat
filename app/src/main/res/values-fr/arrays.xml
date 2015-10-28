@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="notes">
+       
+        <item> Vous pouvez enregistrer les satellites de la fenêtre de filtrage !!. </item> 
+         <item> Regardez dans le menu d\'options </item> 
+		<item> Plus ... -> Comment puis-je? </item> 
+		<item> pour en savoir plus. </item>
+        
+    </string-array>
+
+</resources>

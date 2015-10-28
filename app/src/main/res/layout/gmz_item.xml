@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/gmz_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:drawable/list_selector_background"
+    android:orientation="vertical"
+    android:paddingTop="8dp" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="3dp" >
+
+        <TextView
+            android:id="@+id/gmz_textogra"
+            style="@style/gmztextogrande"
+            android:background="#B3D9FF"
+            android:textColor="#004A95" />
+
+        <TextView
+            android:id="@+id/gmz_textopeq"
+            style="@style/gmztextopeq"
+            android:background="#E6F3FF" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/linea_frec"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp" /> <!-- LINEAS -->
+
+</LinearLayout>

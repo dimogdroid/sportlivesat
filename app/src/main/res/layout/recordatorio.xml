@@ -1,0 +1,91 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:baselineAligned="false"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/txtfecha"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="30 /08 / 2014"
+            android:textColor="#7C7C7C"
+            android:textSize="22dp"
+            android:textStyle="bold" >
+        </TextView>
+
+        <Button
+            android:id="@+id/btn_fecha"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="#33B5E5"
+            android:text="@string/cambiarfecha"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" >
+        </Button>
+
+        <TextView
+            android:id="@+id/txthora"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="18:35 H"
+            android:textColor="#7C7C7C"
+            android:textSize="22dp"
+            android:textStyle="bold" >
+        </TextView>
+
+        <Button
+            android:id="@+id/btn_hora"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="#33B5E5"
+            android:text="@string/cambiarhora"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" >
+        </Button>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_cancelar"
+            style="@style/CustomStyleButtonNew"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_weight="1.0"
+            android:text="@string/cancelar" >
+        </Button>
+
+        <Button
+            android:id="@+id/btn_aceptar"
+            style="@style/CustomStyleButtonNew"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_weight="1.0"
+            android:text="@string/aceptar" >
+        </Button>
+    </LinearLayout>
+
+</LinearLayout>

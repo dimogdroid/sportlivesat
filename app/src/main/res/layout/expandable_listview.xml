@@ -1,0 +1,74 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dots="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/lytcabecera"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="#00BCD4"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_marginTop="25dp">
+
+        <ImageView
+            android:id="@+id/imgatras"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/atras"/>
+
+        <TextView
+            android:id="@+id/txttitulocab"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:layout_toRightOf="@+id/imgatras"
+            android:textColor="#FFFFFF"
+
+            />
+    </LinearLayout>
+
+
+    <ExpandableListView
+        android:id="@+id/listado"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@null"
+        android:dividerHeight="4dp"
+        android:layout_below="@+id/lytcabecera"
+        />
+
+    <!--<LinearLayout-->
+        <!--android:id="@+id/lytloading"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:gravity="center">-->
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/Cargando"-->
+            <!--android:textSize="30sp"-->
+            <!--android:textColor="#0000FF" />-->
+
+        <!--<pl.tajchert.sample.DotsTextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+
+            <!--android:id="@+id/dots"-->
+            <!--android:textSize="45sp"-->
+            <!--android:textColor="#0000FF"-->
+
+            <!--dots:autoplay="false"-->
+            <!--dots:period="1000" />-->
+    <!--</LinearLayout>-->
+
+
+</RelativeLayout>

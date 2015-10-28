@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="notes">
+       <item> Sie können Satelliten von der Filter Fenster retten !!. </item> 
+         <item> Schauen Sie in das Optionsmenü </item> 
+		<item> Mehr ... -> Wie kann ich? </item> 
+		<item> um mehr zu erfahren. </item>
+     </string-array>
+</resources>

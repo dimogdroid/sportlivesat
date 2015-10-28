@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="notes">
+         <item> You can save satellites from the filtering window !!. </item>
+        <item>  Look into the option menu </item>
+		<item>	More ... -> How do I? </item> 
+		<item>	to learn more. </item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+     android:orientation="vertical"
+    android:layout_marginTop="20dp"
+    android:background="@drawable/custom_fondo" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/about_like_mail"
+            style="@style/CustomAboutButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:drawableLeft="@drawable/button_email"
+            android:text="@string/about_comments_like_email" />
+
+
+        <Button
+            android:id="@+id/about_like_compartir"
+            style="@style/CustomAboutButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:drawableLeft="@drawable/button_twitter"
+            android:text="@string/about_comments_like_twitter" />
+        
+
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+         <TextView
+            android:id="@+id/gracias"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/gracias" />
+        
+
+        <TextView
+            android:id="@+id/agradecimientos"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/agradecimientos" />
+        <TextView
+            android:id="@+id/iconos1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="- Icon Calendar.Designed by Freepik " />
+        <TextView
+            android:id="@+id/iconos"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="10dp"
+            android:layout_marginLeft="5dp"
+            android:autoLink="web"
+            android:text="http://www.freepik.com/free-vector/calendar-notebook-paper_759587.htm" />
+        <TextView
+            android:id="@+id/iconos2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="- Font Old Bookshop by: " />
+        <TextView
+            android:id="@+id/iconos3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="10dp"
+            android:autoLink="web"
+            android:layout_marginLeft="5dp"
+            android:text="http://www.dafont.com/es/old-bookshop.font" />
+
+
+     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#cecdc8"
+            android:textColor="#ffffff"
+            android:gravity="center"
+            android:textSize="17dp"
+            android:text="@string/novedades" />
+
+        <TextView
+            android:id="@+id/html_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:maxLines = "100"
+			android:scrollbars = "vertical"/>
+    </LinearLayout>
+    
+
+</LinearLayout>

@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="futbol">Fútbol</string>
+    <string name="otros">Otros</string>
+    <string name="internacional">Internacional</string>
+    <string name="uefa">UEFA</string>
+    <string name="europa">Europa</string>
+    <string name="champion">CHAMPIONS league</string>
+    <string name="europaleague">EUROPA league</string>
+    <string name="hello">Hello World, SoccerSatActivity!</string>
+    <string name="app_name">Sport Live Sat</string>
+    <string name="titulo">Sport Live Sat</string>
+    <string name="conectando">Conectando...</string>
+    <string name="extrayendo">Buscando datos en la red...</string>
+    <string name="dialogo_datos_msg">Procesando la lista de clientes y servidores</string>
+    <string name="dialogo_error">Se produjo el siguiente error:\n\'%s\' </string>
+    <string name="dialogo_sin_conexion">Por favor, comprueba que tienes conexión a internet</string>
+    <string name="dialogo_sin_datos">No existen datos en estos momentos. Por favor, intentelo más tarde. Gracias</string>
+    <string name="dialogo_cache_mostrada">Se mostrarán los últimos datos válidos</string>
+    <string name="error_not_found">Página no encontrada</string>
+    <string name="error_unahthorized">Usuario y/o contraseña incorrecta</string>
+    <string name="error_no_connection">Sin conexión</string>
+    <string name="error_connection_rejected">Conexión rechazada</string>
+    <string name="error_no_data">No se obtuvieron datos</string>
+    <string name="error_unknown_error">Se produjo un error desconocido</string>
+    <string name="error_reading_error">Error leyendo respuesta</string>
+    <string name="errorclients">Hubo un error extrayendo la lista de clientes</string>
+    <string name="errorconnect">Hubo un error de conexión</string>
+    <string name="errorconnect2">%s. Datos no actualizados.</string>
+    <string name="errordescono">Se produjo un error desconocido</string>
+    <string name="errorserver">Hubo un error extrayendo la lista de servidores</string>
+    <string name="error_datos">Los datos de la conexión no están completos</string>
+    <string name="satelite">Satélite</string>
+    <string name="posicion">Posición</string>
+    <string name="frecuencia">Frecuencia</string>
+    <string name="symbol_rate">Symbol R</string>
+    <string name="encriptacion">Encriptado</string>
+    <string name="actual">Actual</string>
+    <string name="atras">Atrás</string>
+    <string name="Cargando">Cargando ...</string>
+    <string name="si">Sí</string>
+    <string name="changelog_title">Antes de comenzar</string>
+    <string name="version">Version: </string>
+    <string name="about">Acerca de ...</string>
+    <string name="about_msg">Por favor, visita el enlace siguiente para más información:</string>
+    <string name="about_fuente">Fuente de datos:LiveOnSat</string>
+    <string name="noacceso_error">Esta aplicación requiere acceso a Internet.</string>
+    <string name="noacceso_titulo">Sin conexión</string>
+    <string name="accesodatos_error">No existen datos actualmente de este evento.</string>
+    <string name="accesodatos_titulo">Sin datos</string>
+    <string name="soccer">Soccer</string>
+    <string name="soccermain">FUTBOL</string>
+    <string name="basket">Basket</string>
+    <string name="frecuencias">FRECUENCIAS</string>
+    <string name="gmz">GMZ</string>
+    <string name="diario">DIARIO</string>
+    <string name="magners">RUGBY</string>
+    <string name="buscar">Buscar en la red... </string>
+    <string name="espana">ESPAÑA</string>
+    <string name="italia">ITALIA</string>
+    <string name="portugal">PORTUGAL</string>
+    <string name="alemania">ALEMANIA</string>
+    <string name="holanda">HOLANDA</string>
+    <string name="francia">FRANCIA</string>
+    <string name="austria">AUSTRIA</string>
+    <string name="grecia">GRECIA</string>
+    <string name="turquia">TURQUIA</string>
+    <string name="bulgaria">BULGARIA</string>
+    <string name="czech">CZECH y ESLOVAQUIA</string>
+    <string name="hungria">HUNGRIA</string>
+    <string name="polonia">POLONIA</string>
+    <string name="rumania">RUMANIA</string>
+    <string name="rusia">RUSIA</string>
+    <string name="ucrania">UCRANIA</string>
+    <string name="dinamarca">DINAMARCA</string>
+    <string name="finlandia">FINLANDIA</string>
+    <string name="noruega">NORUEGA</string>
+    <string name="suecia">SUECIA</string>
+    <string name="inglaterra">UK e IRLANDA</string>
+    <string name="escocia">ESCOCIA</string>
+    <string name="wales">GALES e IRLANDA</string>
+    <string name="todosi">Todos los internacionales</string>
+    <string name="club">EQUIPOS DE CLUBES</string>
+    <string name="interfriend">EQUIPOS INTERNACIONALES</string>
+    <string name="america">América</string>
+    <string name="asia">Asia / Africa </string>
+    <string name="othermain">OTROS DEPORTES</string>
+    <string name="config">CONFIGURACION</string>
+    <string name="acerca">Acerca de...</string>
+    <string name="mls">MLS</string>
+    <string name="argentina">ARGENTINA</string>
+    <string name="brasil">BRASIL</string>
+    <string name="mexico">MEXICO</string>
+    <string name="todos">TODOS</string>
+    <string name="today">HOY</string>
+    <string name="tomorrow">MAÑANA</string>
+    <string name="nba">NBA</string>
+    <string name="fiba">FIBA/ULEB</string>
+    <string name="wcup">BRASIL 2014</string>
+    <string name="ueuro">Eu 2012</string>
+    <string name="ueurojr">EUROCOPA 2012 (Sub-21)</string>
+    <string name="boxing">BOXEO</string>
+    <string name="gaelic">GAELIC SPORT</string>
+    <string name="handball">BALONMANO</string>
+    <string name="formula">FORMULA 1</string>
+    <string name="rugbyl">RUGBY LEAGUE</string>
+    <string name="rugbyu">RUGBY UNION</string>
+    <string name="volleyball">VOLEIBOL</string>
+    <string name="baseball">BEISBOL</string>
+    <string name="nfl">NFL</string>
+    <string name="hockey">HOCKEY</string>
+    <string name="soccera">SOCCER</string>
+    <string name="icehockey">HOCKEY HIELO</string>
+    <string name="porfecha">Por Fechas</string>
+    <string name="europe">EUROPA</string>
+    <string name="uk">UK / Irlanda</string>
+    <string name="friendly">Amistosos</string>
+    <string name="more">Más...</string>
+    <string name="basketball">BALONCESTO</string>
+    <string name="othersport">OTROS DEPORTES</string>
+    <string name="setting">CONFIGURACION</string>
+    <string name="aceptar">  Aceptar  </string>
+    <string name="cancelar">  Cancelar  </string>
+    <string name="cambiarfecha">Cambiar Fecha</string>
+    <string name="cambiarhora">Cambiar Hora</string>
+    <string name="fecha">Fecha: </string>
+    <string name="hora">Hora: </string>
+    <string name="notifica">Notificación </string>
+    <string name="notificacreada">Notificación creada.</string>
+    <string name="frasenotifica">Notificación de Evento Deportivo. Púlsame!</string>
+    <string name="nomostradenuevo">No mostrar de nuevo.</string>
+    <string name="atencion">Atención.</string>
+    <string name="frasedialog">
+<![CDATA[   
+     <p>Si deseas añadir una <b>Notificación</b> para recordar este evento,
+      pulsa sobre el icono Calendario o en la parte superior del listado </p>
+	 <p>Puedes crear tantas como quieras!!</p>
+	 <p>Si deseas <b>filtrar los satétiles</b>, pulsa sobre el icono Embudo.</p>
+	 <p>Guardarás el último filtro realizado si está marcada la opción. Ten cuidado!, no todos los eventos
+	 deportivos se emiten por los mismo satelites ! </p>
+	 <p>Para quitar el filtro, guarda tu último filtrado sin señalar ningún satélite</p>
+	 ]]>
+    </string>
+    <string name="dateinvalid">Fecha/Hora Inválida.</string>
+    <string name="eurocopa">EURO2016</string>
+    <string name="amistosos">AMISTOSOS</string>
+    <string name="todosmen">TODOS Masculino</string>
+    <string name="todoswomen">TODOS Femenino </string>
+    <string name="concacaf">CONCACAF</string>
+    <string name="conmebol">CONMEBOL</string>
+    <string name="colombia">COLOMBIA</string>
+    <string name="afc">AFC</string>
+    <string name="caf">CAF</string>
+    <string name="australia">AUSTRALIA</string>
+    <string name="china">CHINA</string>
+    <string name="japon">JAPON</string>
+    <string name="marruecos">MARRUECOS</string>
+    <string name="arabia">ARABIA SAUDI</string>
+    <string name="africasur">SUDAFRICA</string>
+    <string name="coreasur">COREA DEL SUR</string>
+    <string name="mas">MÁS ...</string>
+    <string name="about_comments_like_email">Envíanos un email</string>
+    <string name="about_comments_like_market">Puntuanos en Google Play </string>
+    <string name="about_comments_like_twitter"> Comparte en Twitter</string>
+    <string name="about_mail_subject">Una buena Aplicación</string>
+    <string name="about_mail_body"> Mira esta App, parece interesante.</string>
+    <string name="about_facebook_url">http://dimogaru.hol.es/</string>
+    <string name="about_twitter_msg">Conoces la aplicación de Android #SportLiveSat? .</string>
+    <string name="about_problem_mail">DimogDroid@gmail.com</string>
+    <string name="about_problem_subject">Sport Live Sat.</string>
+    <string name="recordar">Recordar</string>
+    <string name="filtro">Filtrar Satélites</string>
+    <string name="filtrar">Filtrar</string>
+    <string name="gracias">Gracias a:</string>
+    <string name="agradecimientos"> - A Fabian Lechner por su ayuda a traducir al Alemán..</string>
+    <string name="sinsatelites">No existen datos para el filtro seleccionado.</string>
+    <string name="guardarsat">Guardar filtro.</string>
+    <string name="filtroactivo">Filtro Activado! </string>
+    <string name="about_help">¿Cómo hacerlo? </string>
+    <string name="novedades">NOVEDADES</string>
+    <string name="frasenovedades">
+<![CDATA[  
+
+<p> <b> version 4.6 </b> </p>
+		<p> Puedes guardar el filtrado de satélites </p>
+<p> <b> version 4.5 </b> </p>  
+		<p> - Añadimos <b>filtro</b> para satélites!  </p> 
+		<p> - Mejoramos la Interfaz de la App.</p> 
+		<p> - Solución de pequeños bugs. </p>
+		
+        <p> <b>Versión 4.4</b> </p>
+		<p>	- Añadimos la Eurocopa 2016. </p>
+		<p>	- Añadimos nuevos paises como China, Japon, Marruecos, Colombia... </p>
+		<p>	- Nuevos enlaces para mostrar TODA la información a la vez ( Enlaces TODO) </p>
+	
+		<p> <b>Versión 4.3</b> </p>
+		<p>	- Añadimos la <b>posibilidad de crear NOTIFICACIONES!! </b> <br> 
+		    Más información en la pantalla de Frecuencias.
+         (Para versiones Android superiores a 2.3.3) </p>
+         
+         <br>
+         <p> No se te olvide configurar tu zona horaria en el apartado de Configuración, al final del menú. </p>
+	
+		 ]]>
+    </string>
+    <string name="help">
+<![CDATA[  
+       
+       
+       <H2><SPAN STYLE="font-style: normal">Filtros de
+Sat&eacute;lites:</SPAN></H2>
+<H3 CLASS="western"><SPAN STYLE="font-style: normal">	Crear:</SPAN></H3>
+<P><SPAN STYLE="font-style: normal">		Para crear un filtro de
+sat&eacute;lites, situate en la pantalla de Frecuencias. Una vez en
+ella, 	en la parte superior aparecer&aacute;n varios iconos. Pulsa
+sobre el que posee forma de </SPAN><I><B>Embudo.</B></I></P>
+<P><I><B>		</B></I><SPAN STYLE="font-style: normal"><SPAN STYLE="font-weight: normal">Marca
+todos los sat&eacute;lites que desees para formar el filtro</SPAN></SPAN><I><B>.
+</B></I><SPAN STYLE="font-style: normal"><SPAN STYLE="font-weight: normal">Aseg&uacute;rate
+de que est&eacute; 	marcada la opci&oacute;n </SPAN></SPAN><I><B>Guardar
+Filtro.</B></I></P>
+<P><I><B>	OJO!: </B></I><SPAN STYLE="font-style: normal"><SPAN STYLE="font-weight: normal">Ten
+en cuanta que otros eventos deportivos pueden ir por distintos
+canales, y puede 	que al filtrar no corresponda ninguno con el filtro
+creado.</SPAN></SPAN></P>
+<H3 CLASS="western"><SPAN STYLE="font-style: normal"><SPAN STYLE="font-weight: normal">	</SPAN></SPAN><SPAN STYLE="font-style: normal"><B>Eliminar
+:</B></SPAN></H3>
+<P><SPAN STYLE="font-style: normal"><B>		</B></SPAN><SPAN STYLE="font-style: normal"><SPAN STYLE="font-weight: normal">Para
+eliminar el filtro que tenemos basta con (siempre estando el CHECK de
+	</SPAN></SPAN><I><B>Guardar Filtro </B></I><SPAN STYLE="font-style: normal"><SPAN STYLE="font-weight: normal">activado)
+filtrar un evento sin tener seleccionado ning&uacute;n sat&eacute;lite.</SPAN></SPAN></P>
+<H2 CLASS="western">Notificaciones:</H2>
+<P>	Para crear una <I>notificaci&oacute;n, </I><SPAN STYLE="font-style: normal">desde
+la pantalla de </SPAN><I><B>Frecuencias</B></I><SPAN STYLE="font-style: normal"><SPAN STYLE="font-weight: normal">
+pulsaremos sobre el icono de la parte superior con forma de
+</SPAN></SPAN><I><B>Calendario.</B></I><SPAN STYLE="font-style: normal"><SPAN STYLE="font-weight: normal">
+Insertaremos la hora y el d&iacute;a que deseemos ser avisados, y
+legado el momento nuestro tel&eacute;fono crear&aacute; una
+notificaci&oacute;n.</SPAN></SPAN></P>
+<P><SPAN STYLE="font-style: normal"><SPAN STYLE="font-weight: normal">	Puedes
+crear tantas como quieras !</SPAN></SPAN></P>
+<P><SPAN STYLE="font-style: normal"><SPAN STYLE="font-weight: normal">	Nota:
+Tambi&eacute;n puedes mostrar la pantalla de </SPAN></SPAN><I><B>Notificaciones</B></I><SPAN STYLE="font-style: normal"><SPAN STYLE="font-weight: normal">
+pulsando sobre la imagen que muestra el Evento Deportivo, (franja de
+color Naranja justo encima de los canales).</SPAN></SPAN></P>
+
+		 ]]>
+    </string>
+
+</resources>

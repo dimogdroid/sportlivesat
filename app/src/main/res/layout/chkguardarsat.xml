@@ -1,0 +1,19 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_rootg"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal"
+    android:background="#dcf5f7"
+    android:padding="10dp" >
+	
+    
+    
+    <CheckBox
+        android:id="@+id/guardarsat"
+        android:checked="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/guardarsat">
+    </CheckBox>
+
+</LinearLayout>

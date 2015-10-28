@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/titulo_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="#DEDFDE"
+        android:padding="5dp" >
+
+        <TextView
+            android:id="@+id/titulo_gmz"
+            style="@style/tituloventana"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="GMZ" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/gmz_actual"
+        style="@style/gmztextoini"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:id="@+id/gmz_scroll"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:id="@+id/gmz_list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:padding="2dp" >
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
