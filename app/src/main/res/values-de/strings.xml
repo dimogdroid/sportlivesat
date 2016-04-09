@@ -236,23 +236,12 @@
      <string name="novedades">Nachrichten</string>
     <string name="frasenovedades">
 <![CDATA[
-<p> <b> version 4.6 </b> </p>
-		<p> Sie können Filter Satelliten halten </p>
-<p> <b> version 4.5 </b> </p>  
-		<p> - <b>Filter</b> hinzufügen, um Satelliten!   </p> 
-		<p> - Wir verbesserten Schnittstelle App. </p> 
-		<p> - Kleinere Fehler behoben. </p>
-<p> <b> Version 4.4 </b> </p> 
-<p> - EURO 2016 hinzugefügt </p> 
-<p> - Neue Länder hinzugefügt, wie China, Japan, Marokko, Kolumbien ...  </p> 
-<p> - Neue Links, um alle Informationen auf einmal zu zeigen (ALLE Links) </p> 
-
-<p> <b> Version 4.3 </ b> </p> 
-<p> -  Möglichkeit Hinweise anzuzeigen !!  
-Weitere Informationen über Frequenzen. 
-          (Für Android-Versionen 2.3.3  und höher) </p> 
-      <br> 
-     <p> Vergessen Sie nicht, Ihre Zeitzone im Abschnitt Einstellungen am unteren Ende des Menüs einzustellen. </p>
+ <p>Fügen Sie die Copa America. </p>
+ <p>Fügen Sie weitere Werte zu GMZ. </p>
+ <p>Fehler behoben GMZ. </p>
+ <p>Hinzugefügt Grad Satelliten Filter. </p>
+ <p>Die Verbesserung der Zugriffsgeschwindigkeit . </p>
+ <p>Feste verschiedene Bugs.</p>
   
  ]]>
     </string>
@@ -298,6 +287,8 @@ orangefarbene gerade über dem Kanal). </SPAN> </SPAN> </P>
       
 		 ]]>
     </string>
+    <string name="copaamerica">COPA AMERICA</string>
+    <string name="news"><![CDATA[Neu Bei Konfiguration -> Mehr]]></string>
 
 
 </resources>

@@ -14,11 +14,12 @@ import android.widget.TextView;
 
 public class GmzActivity extends Activity implements OnClickListener {
 
-    private String[] gmz = {"GMZ +4.30", "GMZ +4", "GMZ +3.30", "GMZ +3",
+    private String[] gmz = {"GMZ +6","GMZ +4.30", "GMZ +4", "GMZ +3.30", "GMZ +3",
             "GMZ +2", "GMZ +1", "GMZ 0", "GMZ -1", "GMZ -3", "GMZ -3.30",
             "GMZ -4", "GMZ -5", "GMZ -6", "GMZ -8"};
 
     private String[] gmz_text = {
+            "",
             "Kabul, Afganistan ",
             "Abu Dhabi (Emiratos Arabes Unidos), Moscatel, Tblisi, Volgogrado",
             "Teheran (Iran)",

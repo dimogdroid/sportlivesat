@@ -290,7 +290,7 @@ public class ListaCanales extends Activity {
 
 		if (existeFiltro) {
 			for (int i = 0; i < items.length; i++) {
-				if (seletedItems.contains((String) items[i])) {
+				if (seletedItems.contains( items[i])) {
 					states[i] = true;
 				}
 			}
@@ -481,8 +481,8 @@ public class ListaCanales extends Activity {
 				lfrecuencias = c.getlFrecuencias();
 				for (Frecuencias f : lfrecuencias) {
 
-					if (!listItems.contains(f.getSatelite())) {
-						listItems.add(f.getSatelite());
+					if (!listItems.contains(c.getlFrecuencias().get(0).getPosicion() + " " + f.getSatelite())) {
+						listItems.add(c.getlFrecuencias().get(0).getPosicion() + " " + f.getSatelite());
 					}
 				}
 			}

@@ -35,27 +35,28 @@ public class MainActivity extends AppCompatActivity {
 
     int gmzpuesto = 0;
     int googleplay = 0;
+    int novedades =0;
     String sGmz = "";
 
     Context context = this;
 
     Partidos partido = new Partidos();
 
-    private InterstitialAd interstitial;
+  //  private InterstitialAd interstitial;
 
     @Override
     protected void onDestroy() {
 
         super.onDestroy();
 
-        displayInterstitial();
+       // displayInterstitial();
     }
 
-    public void displayInterstitial() {
-        if (interstitial.isLoaded()) {
-            interstitial.show();
-        }
-    }
+  //  public void displayInterstitial() {
+  //      if (interstitial.isLoaded()) {
+  //          interstitial.show();
+  //      }
+  //  }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,11 +79,15 @@ public class MainActivity extends AppCompatActivity {
             setSupportActionBar(toolbar);
 
             ActionBar actionBar = getSupportActionBar();
-            actionBar.setDisplayHomeAsUpEnabled(false);
-            actionBar.setDisplayShowHomeEnabled(false);
-            actionBar.setDisplayShowTitleEnabled(false);
-            actionBar.setDisplayUseLogoEnabled(false);//unico
-            actionBar.setHomeButtonEnabled(false);
+            if (actionBar != null) {
+                actionBar.setDisplayHomeAsUpEnabled(false);
+
+                actionBar.setDisplayShowHomeEnabled(false);
+
+                actionBar.setDisplayShowTitleEnabled(false);
+                actionBar.setDisplayUseLogoEnabled(false);//unico
+                actionBar.setHomeButtonEnabled(false);
+            }
         }
         //    mDrawerToggle = new ActionBarDrawerToggle(this, mDrawer, 0, 0);
         //    mDrawer.setDrawerListener(mDrawerToggle);
@@ -211,11 +216,11 @@ public class MainActivity extends AppCompatActivity {
         }
 
         // PUBLICIDAD
-        interstitial = new InterstitialAd(this);
-        interstitial.setAdUnitId(AD_UNIT_ID);
+      //  interstitial = new InterstitialAd(this);
+      //  interstitial.setAdUnitId(AD_UNIT_ID);
 
         // Create ad request.
-        AdRequest adRequest = new AdRequest.Builder().build();
+      //  AdRequest adRequest = new AdRequest.Builder().build();
 
         // Check the logcat output for your hashed device ID to get test ads on
         // a physical device.
@@ -224,7 +229,7 @@ public class MainActivity extends AppCompatActivity {
         //		.addTestDevice("A31D280E26B4043E35F3B89D12C66B27").build();
 
         // Load the interstitial ad.
-        interstitial.loadAd(adRequest);
+      //  interstitial.loadAd(adRequest);
 
 
         //Comprobamos si tenemos gmz para lanzar el config
@@ -235,6 +240,8 @@ public class MainActivity extends AppCompatActivity {
 
         //googlePlay
         googleplay = settings.getInt("googleplay", 0);
+
+        novedades = settings.getInt("novedades", 0);
 
         if ((gmzpuesto == 0) && (sGmz.equalsIgnoreCase(""))) {  //Lanzar config
             // final Intent intent;
@@ -290,7 +297,36 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
+        //Novedades en MAS
+        if (novedades==0){//lanzar
+            novedades = novedades + 1;
+            SharedPreferences.Editor editor = settings.edit();
+            editor.putInt("novedades",novedades);
+            editor.commit();
+            new SweetAlertDialog(this, SweetAlertDialog.WARNING_TYPE)
+                    .setTitleText(getString(R.string.app_name))
+                    .setContentText(getString(R.string.news))
+                    .setCancelText(getString(R.string.nogoogle))
+                    .setConfirmText(getString(R.string.sigoogle))
+                    .showCancelButton(true)
+                    .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                        @Override
+                        public void onClick(SweetAlertDialog sDialog) {
 
+                            Intent intent = new Intent(context, AcercadeActivity.class);
+                            intent.putExtra("colorfondo", 7);
+                            startActivity(intent);
+                            sDialog.dismissWithAnimation();
+                        }
+                    })
+                    .setCancelClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                        @Override
+                        public void onClick(SweetAlertDialog sDialog) {
+                            sDialog.cancel();
+                        }
+                    })
+                    .show();
+        }
 
 
     }

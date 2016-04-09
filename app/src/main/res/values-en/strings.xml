@@ -236,24 +236,12 @@
         
 <![CDATA[  
 
-		<p> <b> version 4.6 </b> </p>
-		<p> You can keep filtering satellites </p>
-		<p> <b> version 4.5 </b> </p>  
-		<p> - Add <b>filter</b> to satellites!  </p> 
-		<p> - We improved interface App. </p> 
-		<p> - Minor bugs fixed. </p>
-        <p> <b> version 4.4 </b> </p> 
-		<p> - Add the Euro 2016 < p> 
-		<p> - Add new countries like China, Japan, Morocco, Colombia ... </p> 
-		<p> - New links to show ALL the information at once (ALL links) </p> 
-
-		<p> <b> version 4.3 </ b> </p> 
-		<p> - Add the <b> possibility of creating NOTICES !! </b> <br> 
-		More information on the screen of frequencies. <br>
-		(For Android versions above 2.3.3) </p> 
-		         
-          <br> 
-          <p> Do not forget to set your time zone in the Settings section at the bottom of the menu. </p>
+		 <p>Add the Copa America </p>
+ <p>add more values to GMZ </p>
+ <p>GMZ  Fixed errors </p>
+ <p>Added degrees satellites Filter</p>
+ <p>Improved access speed </p>
+ <p>Fixed various bugs</p>
 	 ]]>
     </string>
     
@@ -299,5 +287,7 @@ click on the image showing the Sports Event, (strip
 Orange colored just above the channel). </SPAN> </SPAN> </P>
 		 ]]>
     </string>
+    <string name="copaamerica">AMERICA CUP</string>
+    <string name="news"><![CDATA[New on Configuration -> More ...]]></string>
 
 </resources>

@@ -12,10 +12,16 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ExpandableListView;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdSize;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -44,8 +50,28 @@ import pl.polidea.view.ZoomView;
  * Created by dgdavila on 24/09/2015.
  */
 public class ListaEventos extends Activity {
+    //Bueno. Banner
+    private static final String MY_AD_UNIT_ID = "ca-app-pub-7866637665636353/8934999021";
+    //para programacion
+    //private static final String MY_AD_UNIT_ID = "245D7901D683E021EDC7CC0CEA869DFC";
 
-    private final String[] array = {"Hello", "World", "Android", "is", "Awesome", "World", "Android", "is", "Awesome", "World", "Android", "is", "Awesome", "World", "Android", "is", "Awesome"};
+    private static final String AD_UNIT_ID = "ca-app-pub-7866637665636353/8579016620";
+
+    private InterstitialAd interstitial;
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+
+    }
+
+    public void displayInterstitial() {
+        if (interstitial.isLoaded()) {
+            interstitial.show();
+        }
+    }
+
+    // private final String[] array = {"Hello", "World", "Android", "is", "Awesome", "World", "Android", "is", "Awesome", "World", "Android", "is", "Awesome", "World", "Android", "is", "Awesome"};
 
     ExpandableListView expandableListView;
  //   DotsTextView dotsTextView;
@@ -69,6 +95,9 @@ public class ListaEventos extends Activity {
     LinearLayout main_container;
 
     int primeravezeventos;
+    static  int mostrarPublicidad=0;
+
+    private AdView adView;
 
     @Override
     public void onSaveInstanceState(Bundle outState) {
@@ -94,6 +123,9 @@ public class ListaEventos extends Activity {
 
         main_container = (LinearLayout) findViewById(R.id.lytcontainer);
         main_container.addView(zoomView);
+
+        final SharedPreferences settings = getSharedPreferences("perfil",
+                Context.MODE_PRIVATE);
 
 
      //   setContentView(R.layout.expandable_listview);
@@ -195,6 +227,13 @@ public class ListaEventos extends Activity {
                             childPosition);
 
                     selectItem(selected);
+                    if (mostrarPublicidad==1){
+                        displayInterstitial();
+                    }
+
+                    mostrarPublicidad++;
+
+
                     return true;
                 }
             });
@@ -207,8 +246,7 @@ public class ListaEventos extends Activity {
             });
 
 
-            SharedPreferences settings = getSharedPreferences("perfil",
-                    Context.MODE_PRIVATE);
+
             primeravezeventos = settings.getInt("primeravezeventos", 0);
             if (primeravezeventos==0) {
 
@@ -219,8 +257,56 @@ public class ListaEventos extends Activity {
                 MostrarComoHacerZoom();
             }
 
+
+            // Publicidad
+            // ---------------------------------------------------------
+            // Crear adView.
+
+            adView = new AdView(this);
+            adView.setAdUnitId(MY_AD_UNIT_ID);
+            adView.setAdSize(AdSize.BANNER);
+
+            // Buscar LinearLayout suponiendo que se le ha asignado
+            // el atributo android:id="@+id/mainLayout".
+            FrameLayout frmlayout = (FrameLayout) findViewById(R.id.publicidad);
+
+            // Añadirle adView.
+            frmlayout.addView(adView);
+
+            // Iniciar una solicitud genérica. VALIDA
+            AdRequest adRequestB = new AdRequest.Builder().build();
+
+            // Test
+            // AdRequest adRequest = new AdRequest.Builder()
+            // .addTestDevice(AdRequest.DEVICE_ID_EMULATOR) // Todos los emuladores
+            // .addTestDevice("A31D280E26B4043E35F3B89D12C66B27") // Mi teléfono de
+            // prueba Galaxy Nexus
+            // .build();
+
+            // Cargar adView con la solicitud de anuncio.
+            adView.loadAd(adRequestB);
+            // --------------------------------------------------------------------------
+
+            // PUBLICIDAD
+            interstitial = new InterstitialAd(this);
+            interstitial.setAdUnitId(AD_UNIT_ID);
+
+            // Create ad request.
+            AdRequest adRequest = new AdRequest.Builder().build();
+
+            // Check the logcat output for your hashed device ID to get test ads on
+            // a physical device.
+            //AdRequest adRequest = new AdRequest.Builder()
+            //	.addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
+            //		.addTestDevice("A31D280E26B4043E35F3B89D12C66B27").build();
+
+            // Load the interstitial ad.
+            interstitial.loadAd(adRequest);
+
+
+
         } catch (Exception e) {
-            // TODO: handle exception
+            CustomLog.debug("ListaEventos",e.getMessage());
         }
     }
 
@@ -322,9 +408,7 @@ public class ListaEventos extends Activity {
                         }
                     }
 
-                    if (Encontrado) {
-                        // continua
-                    } else {
+                    if (!Encontrado) {
                         resultado = null;
                     }
 
@@ -340,8 +424,6 @@ public class ListaEventos extends Activity {
                 e.printStackTrace();
                 resultado = null;
                 CustomLog.error("MainActivity", e.getMessage());
-            } catch (IOException e) {
-                e.printStackTrace();
             }
 
             if (resultado != null) {
@@ -370,7 +452,7 @@ public class ListaEventos extends Activity {
                         // cogemos la fecha
                         // ejemplo: <h2 class="time_head">Friday, 4th
                         // November</h2>
-                        if (line.indexOf("blockfix") < 0) { // se da al buscar
+                        if (!line.contains("blockfix")) { // se da al buscar
                             // ms
                             // de un partido en una
                             // fecha
@@ -384,25 +466,25 @@ public class ListaEventos extends Activity {
                                             line.indexOf("time_head>") + 10,
                                             line.indexOf("</h2"));
 
-                                    if (fecha.indexOf("Monday")>=0){
+                                    if (fecha.contains("Monday")){
                                         fecha = fecha.replaceAll("Monday",getString(R.string.lunes));
                                     }
-                                    if (fecha.indexOf("Tuesday")>=0){
+                                    if (fecha.contains("Tuesday")){
                                         fecha = fecha.replaceAll("Tuesday",getString(R.string.martes));
                                     }
-                                    if (fecha.indexOf("Wednesday")>=0){
+                                    if (fecha.contains("Wednesday")){
                                         fecha = fecha.replaceAll("Wednesday",getString(R.string.miercoles));
                                     }
-                                    if (fecha.indexOf("Thursday")>=0){
+                                    if (fecha.contains("Thursday")){
                                         fecha = fecha.replaceAll("Thursday",getString(R.string.jueves));
                                     }
-                                    if (fecha.indexOf("Friday")>=0){
+                                    if (fecha.contains("Friday")){
                                         fecha = fecha.replaceAll("Friday",getString(R.string.viernes));
                                     }
-                                    if (fecha.indexOf("Saturday")>=0){
+                                    if (fecha.contains("Saturday")){
                                         fecha = fecha.replaceAll("Saturday",getString(R.string.sabado));
                                     }
-                                    if (fecha.indexOf("Sunday")>=0){
+                                    if (fecha.contains("Sunday")){
                                         fecha = fecha.replaceAll("Sunday",getString(R.string.domingo));
                                     }
 
@@ -414,40 +496,40 @@ public class ListaEventos extends Activity {
 //                                    fecha = fecha.replaceAll("th"," ");
 
                                     //Meses
-                                    if (fecha.indexOf("January")>=0){
+                                    if (fecha.contains("January")){
                                         fecha = fecha.replaceAll("January",getString(R.string.enero));
                                     }
-                                    if (fecha.indexOf("February")>=0){
+                                    if (fecha.contains("February")){
                                         fecha = fecha.replaceAll("February",getString(R.string.febrero));
                                     }
-                                    if (fecha.indexOf("March")>=0){
+                                    if (fecha.contains("March")){
                                         fecha = fecha.replaceAll("March",getString(R.string.marzo));
                                     }
-                                    if (fecha.indexOf("April")>=0){
+                                    if (fecha.contains("April")){
                                         fecha = fecha.replaceAll("April",getString(R.string.abril));
                                     }
-                                    if (fecha.indexOf("May")>=0){
+                                    if (fecha.contains("May")){
                                         fecha = fecha.replaceAll("May",getString(R.string.mayo));
                                     }
-                                    if (fecha.indexOf("June")>=0){
+                                    if (fecha.contains("June")){
                                         fecha = fecha.replaceAll("June",getString(R.string.junio));
                                     }
-                                    if (fecha.indexOf("July")>=0){
+                                    if (fecha.contains("July")){
                                         fecha = fecha.replaceAll("July",getString(R.string.julio));
                                     }
-                                    if (fecha.indexOf("August")>=0){
+                                    if (fecha.contains("August")){
                                         fecha = fecha.replaceAll("August",getString(R.string.agosto));
                                     }
-                                    if (fecha.indexOf("September")>=0){
+                                    if (fecha.contains("September")){
                                         fecha = fecha.replaceAll("September",getString(R.string.septiembre));
                                     }
-                                    if (fecha.indexOf("October")>=0){
+                                    if (fecha.contains("October")){
                                         fecha = fecha.replaceAll("October",getString(R.string.octubre));
                                     }
-                                    if (fecha.indexOf("November")>=0){
+                                    if (fecha.contains("November")){
                                         fecha = fecha.replaceAll("November",getString(R.string.noviembre));
                                     }
-                                    if (fecha.indexOf("December")>=0){
+                                    if (fecha.contains("December")){
                                         fecha = fecha.replaceAll("December",getString(R.string.diciembre));
                                     }
 
@@ -559,11 +641,34 @@ public class ListaEventos extends Activity {
 
                                 // TODO Hay que sumar el GMZ
                                 String[] temp;
+                                String[] temp2;
                                 temp = hora.split(":");
                                 int horaGmz = Integer.valueOf(temp[1].trim());
 
-                                horaGmz = horaGmz + Integer.valueOf(sGmz);
-                                hora = horaGmz + ":" + temp[2];
+                                int horaGmzPunto;
+                                int minutoGmzPunto =0;
+                                if (sGmz.contains(".")){
+                                    temp2 = sGmz.split("[.]");
+                                    horaGmzPunto = Integer.valueOf(temp2[0].trim());
+                                    minutoGmzPunto = Integer.valueOf(temp2[1].trim());
+                                    horaGmz = horaGmz + horaGmzPunto;
+                                }else{
+                                    horaGmz = horaGmz + Integer.valueOf(sGmz);
+                                }
+
+                                minutoGmzPunto = minutoGmzPunto + Integer.valueOf(temp[2].trim());
+
+                                if (minutoGmzPunto>=60){
+                                    minutoGmzPunto = minutoGmzPunto%60;
+                                    horaGmz = horaGmz +1;
+                                }
+
+                                if (horaGmz>=24){
+                                    horaGmz = horaGmz % 24;
+                                }
+
+                                hora = String.format("%02d", Integer.parseInt(String.valueOf(horaGmz))) +
+                                        ":" + String.format("%02d", Integer.parseInt(String.valueOf(minutoGmzPunto)));
                                 partidos.setHora(hora);
                                 Encontrado = true;
                             } else {
@@ -593,7 +698,7 @@ public class ListaEventos extends Activity {
                                 // Encontrado = true;
                             } else {
 
-                                if (line.indexOf("blockfix") >= 0) {
+                                if (line.contains("blockfix")) {
                                     // nuevo bloque de partidos
 
                                     partidos.setLcanales(listaCanales);
@@ -608,7 +713,7 @@ public class ListaEventos extends Activity {
                                                         line.indexOf("comp_head>") + 10,
                                                         line.indexOf("</span"));
                                     }
-                                    if (line.indexOf("time_head") >= 0) {
+                                    if (line.contains("time_head")) {
 
                                         // puede que haya que actualizar la
                                         // frase
@@ -622,7 +727,7 @@ public class ListaEventos extends Activity {
                                         lfechaPartidos.add(fpartidos);
                                         Encontrado = true; // de datos
                                     } else {
-                                        if (line.indexOf("</html>") >= 0) { // Final
+                                        if (line.contains("</html>")) { // Final
                                             // de
                                             // lectura
                                             partidos.setLcanales(listaCanales);
@@ -659,10 +764,9 @@ public class ListaEventos extends Activity {
                 paispartidos.setLpartidos(null);
             }
 
-            PaisPartidos result = paispartidos;
 
             // publishProgress(2);
-            return result;
+            return paispartidos;
         }
 
         @Override
@@ -704,11 +808,11 @@ public class ListaEventos extends Activity {
             Frecuencias frecuencias;
             List<Frecuencias> listaFrec = new ArrayList<Frecuencias>();
 
-            String pos_col = null;
-            String rest_col = null;
-            String freq_col = null;
-            String rest_col2 = null;
-            String codificacion = null;
+            String pos_col;
+            String rest_col;
+            String freq_col;
+            String rest_col2;
+            String codificacion;
             String restoLinea = line;
             try {
                 while (restoLinea.indexOf("&quot;pos_col&quot;>") > 0) {
@@ -740,13 +844,13 @@ public class ListaEventos extends Activity {
                             .indexOf("rest_col"));
 
                     String subcadena = restoLinea.substring(1, 100);
-                    if (subcadena.indexOf("enc_not_live") >= 0) {
+                    if (subcadena.contains("enc_not_live")) {
                         codificacion = limpiarString(restoLinea.substring(
                                 restoLinea.indexOf("enc_not_live"),
                                 restoLinea.indexOf(("</td>"),
                                         restoLinea.indexOf("enc_not_live"))));
                     } else {
-                        if (subcadena.indexOf("enc_live") >= 0) {
+                        if (subcadena.contains("enc_live")) {
                             codificacion = limpiarString(restoLinea.substring(
                                     restoLinea.indexOf("enc_live"),
                                     restoLinea.indexOf(("</td>"),
@@ -791,26 +895,26 @@ public class ListaEventos extends Activity {
             String limpia = null;
 
             try {
-                if (sucia.indexOf(">") >= 0) {
+                if (sucia.contains(">")) {
                     limpia = sucia.substring(sucia.indexOf(">"));
                 } else {
                     limpia = sucia.substring(sucia.indexOf(","));
                 }
 
                 // String limpia=sucia;
-                if (limpia.indexOf("&deg;") >= 0) { // grados del satelite
+                if (limpia.contains("&deg;")) { // grados del satelite
                     limpia = limpia.replaceAll("&deg;", "º");
                 }
-                if (limpia.indexOf("\"") >= 0) { // grados del satelite
+                if (limpia.contains("\"")) { // grados del satelite
                     limpia = limpia.replaceAll("\"", "");
                 }
-                if (limpia.indexOf(">") >= 0) { // grados del satelite
+                if (limpia.contains(">")) { // grados del satelite
                     limpia = limpia.replaceAll(">", "");
                 }
-                if (limpia.indexOf("\'") >= 0) { // grados del satelite
+                if (limpia.contains("\'")) { // grados del satelite
                     limpia = limpia.replaceAll("\'", "");
                 }
-                if (limpia.indexOf(",") >= 0) { // grados del satelite
+                if (limpia.contains(",")) { // grados del satelite
                     limpia = limpia.replaceAll(",", "");
                 }
             } catch (Exception ex) {
@@ -833,14 +937,14 @@ public class ListaEventos extends Activity {
         if (sGmz.equalsIgnoreCase("GMZ 0")) {
             sGmz = "0";
         } else {
-            if (sGmz.indexOf("GMZ") >= 0) {
+            if (sGmz.contains("GMZ")) {
                 sGmz = sGmz.substring(4);
             } else {
                 sGmz = "0";
             }
         }
         // quitar el mï¿½s
-        if (sGmz.indexOf("+") >= 0) {
+        if (sGmz.contains("+")) {
             sGmz = sGmz.substring(1);
         }
         return sGmz;

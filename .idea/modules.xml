@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/SportLiveSatVDEF.iml" filepath="$PROJECT_DIR$/SportLiveSatVDEF.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sportlivesat.iml" filepath="$PROJECT_DIR$/sportlivesat.iml" />
     </modules>
   </component>
 </project>
-

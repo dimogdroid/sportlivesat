@@ -42,32 +42,44 @@
         android:divider="@null"
         android:dividerHeight="4dp"
         android:layout_below="@+id/lytcabecera"
-        />
+        android:layout_above="@+id/publicidad" />
+
+    <FrameLayout
+        android:id="@+id/publicidad"
+        android:layout_width="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content" />
+
+
+
+
+
+
 
     <!--<LinearLayout-->
-        <!--android:id="@+id/lytloading"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="match_parent"-->
-        <!--android:layout_alignParentBottom="true"-->
-        <!--android:gravity="center">-->
+    <!--android:id="@+id/lytloading"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:gravity="center">-->
 
-        <!--<TextView-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:text="@string/Cargando"-->
-            <!--android:textSize="30sp"-->
-            <!--android:textColor="#0000FF" />-->
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="@string/Cargando"-->
+    <!--android:textSize="30sp"-->
+    <!--android:textColor="#0000FF" />-->
 
-        <!--<pl.tajchert.sample.DotsTextView-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
+    <!--<pl.tajchert.sample.DotsTextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
 
-            <!--android:id="@+id/dots"-->
-            <!--android:textSize="45sp"-->
-            <!--android:textColor="#0000FF"-->
+    <!--android:id="@+id/dots"-->
+    <!--android:textSize="45sp"-->
+    <!--android:textColor="#0000FF"-->
 
-            <!--dots:autoplay="false"-->
-            <!--dots:period="1000" />-->
+    <!--dots:autoplay="false"-->
+    <!--dots:period="1000" />-->
     <!--</LinearLayout>-->
 
 

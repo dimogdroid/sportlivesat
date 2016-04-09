@@ -230,26 +230,12 @@
     <string name="frasenovedades">
 <![CDATA[  
 
-<p> <b> version 4.6 </b> </p>
-		<p> Puedes guardar el filtrado de satélites </p>
-<p> <b> version 4.5 </b> </p>  
-		<p> - Añadimos <b>filtro</b> para satélites!  </p> 
-		<p> - Mejoramos la Interfaz de la App.</p> 
-		<p> - Solución de pequeños bugs. </p>
-		
-        <p> <b>Versión 4.4</b> </p>
-		<p>	- Añadimos la Eurocopa 2016. </p>
-		<p>	- Añadimos nuevos paises como China, Japon, Marruecos, Colombia... </p>
-		<p>	- Nuevos enlaces para mostrar TODA la información a la vez ( Enlaces TODO) </p>
-	
-		<p> <b>Versión 4.3</b> </p>
-		<p>	- Añadimos la <b>posibilidad de crear NOTIFICACIONES!! </b> <br> 
-		    Más información en la pantalla de Frecuencias.
-         (Para versiones Android superiores a 2.3.3) </p>
-         
-         <br>
-         <p> No se te olvide configurar tu zona horaria en el apartado de Configuración, al final del menú. </p>
-	
+ <p>Añadida la Copa America</p>
+ <p>Añadidos más valores a GMZ</p>
+ <p>Solucionados errores de GMZ</p>
+ <p>Añadidos grados a los satélites en Filtro.</p>
+ <p>Mejora de velocidad de acceso</p>
+ <p>Solucionados diversos bugs</p>
 		 ]]>
     </string>
     <string name="help">
@@ -295,5 +281,7 @@ color Naranja justo encima de los canales).</SPAN></SPAN></P>
 
 		 ]]>
     </string>
+    <string name="copaamerica">COPA AMERICA</string>
+    <string name="news"><![CDATA[Novedades en Configuracion -> Mas]]></string>
 
 </resources>

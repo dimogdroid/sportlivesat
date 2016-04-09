@@ -153,8 +153,10 @@ public class TestDiarioViewAdapter extends RecyclerView.Adapter<TestDiarioViewAd
         holder.txttitulo.setText(titulo);
         holder.txtpais.setText(pais);
 
-        SimpleDateFormat sdf = new SimpleDateFormat("dd");
-        try {
+        SimpleDateFormat sdf = new SimpleDateFormat("ccc");
+        date = fecha.getTime();
+        String diaSemana=sdf.format(date);
+       /* try {
             date= sdf.parse(sDia + "-" + sMes + "-" + anio);
 
 
@@ -162,10 +164,10 @@ public class TestDiarioViewAdapter extends RecyclerView.Adapter<TestDiarioViewAd
             e.printStackTrace();
         }
         //  Date date = sdf.parse(dateInString);
-        String diaSemana = "";
+
         if (date!=null) {
             diaSemana = date.toString();
-        }
+        }*/
 
 
         //---LETRAS

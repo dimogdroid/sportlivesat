@@ -137,6 +137,16 @@ public class TestAmericaViewAdapter extends RecyclerView.Adapter<TestAmericaView
                 holder.txtpais.setText("allamericas");
                 break;
             case 1:
+                holder.txttitulo.setTextSize(20);
+                holder.txttitulo.setText(context.getString(R.string.copaamerica));
+                // holder.imgcard.setImageResource(R.drawable.concacaf);
+                icon = BitmapFactory.decodeResource(context.getResources(),
+                        R.drawable.copaamerica, options);
+                holder.imgcard.setImageBitmap(icon);
+
+                holder.txtpais.setText("copaamerica");
+                break;
+            case 2:
                 holder.txttitulo.setText(context.getString(R.string.concacaf));
                // holder.imgcard.setImageResource(R.drawable.concacaf);
                 icon = BitmapFactory.decodeResource(context.getResources(),
@@ -145,7 +155,7 @@ public class TestAmericaViewAdapter extends RecyclerView.Adapter<TestAmericaView
 
                 holder.txtpais.setText("concacaf");
                 break;
-            case 2:
+            case 3:
                 holder.txttitulo.setText(context.getString(R.string.conmebol));
                // holder.imgcard.setImageResource(R.drawable.conmebol);
                 icon = BitmapFactory.decodeResource(context.getResources(),
@@ -154,7 +164,7 @@ public class TestAmericaViewAdapter extends RecyclerView.Adapter<TestAmericaView
 
                 holder.txtpais.setText("conmebol");
                 break;
-            case 3:
+            case 4:
                 holder.txttitulo.setText(context.getString(R.string.mls));
                // holder.imgcard.setImageResource(R.drawable.mls);
                 icon = BitmapFactory.decodeResource(context.getResources(),
@@ -163,7 +173,7 @@ public class TestAmericaViewAdapter extends RecyclerView.Adapter<TestAmericaView
 
                 holder.txtpais.setText("mls");
                 break;
-            case 4:
+            case 5:
                 holder.txttitulo.setText(context.getString(R.string.argentina));
                // holder.imgcard.setImageResource(R.drawable.argentina);
                 icon = BitmapFactory.decodeResource(context.getResources(),
@@ -171,7 +181,7 @@ public class TestAmericaViewAdapter extends RecyclerView.Adapter<TestAmericaView
                 holder.imgcard.setImageBitmap(icon);
                 holder.txtpais.setText("arg");
                 break;
-            case 5:
+            case 6:
                 holder.txttitulo.setText(context.getString(R.string.brasil));
                // holder.imgcard.setImageResource(R.drawable.brasil);
                 icon = BitmapFactory.decodeResource(context.getResources(),
@@ -179,7 +189,7 @@ public class TestAmericaViewAdapter extends RecyclerView.Adapter<TestAmericaView
                 holder.imgcard.setImageBitmap(icon);
                 holder.txtpais.setText("bra");
                 break;
-            case 6:
+            case 7:
                 holder.txttitulo.setText(context.getString(R.string.colombia));
                // holder.imgcard.setImageResource(R.drawable.colombia);
                 icon = BitmapFactory.decodeResource(context.getResources(),
@@ -187,7 +197,7 @@ public class TestAmericaViewAdapter extends RecyclerView.Adapter<TestAmericaView
                 holder.imgcard.setImageBitmap(icon);
                 holder.txtpais.setText("col");
                 break;
-            case 7:
+            case 8:
                 holder.txttitulo.setText(context.getString(R.string.mexico));
                // holder.imgcard.setImageResource(R.drawable.mexico);
                 icon = BitmapFactory.decodeResource(context.getResources(),
