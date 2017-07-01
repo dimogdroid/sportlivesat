@@ -289,5 +289,15 @@ Orange colored just above the channel). </SPAN> </SPAN> </P>
 		 ]]>
     </string>
     <string name="news"><![CDATA[New on Configuration -> More ...]]></string>
+    <string name="russia2018">FIFA Worl Cup 2018</string>
+    <string name="asiancup2019">AFC Asian cup 2019</string>
+    <string name="african2019">CAF African cup 2019</string>
+    <string name="confederation">FIFA Confederations  2017</string>
+    <string name="u20worlcup">FIFA U-20 World Cup</string>
+    <string name="toulon">Toulon Youth festival</string>
+    <string name="championu21">UEFA U-21 Cahmpionships</string>
+    <string name="championwom">UEFA Women Championships</string>
+    <string name="nothamerica">NORTH AMERICA</string>
+    <string name="india">INDIA</string>
 
 </resources>

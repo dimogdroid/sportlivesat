@@ -283,5 +283,15 @@ color Naranja justo encima de los canales).</SPAN></SPAN></P>
     </string>
     <string name="copaamerica">COPA AMERICA</string>
     <string name="news"><![CDATA[Novedades en Configuracion -> Mas]]></string>
+    <string name="russia2018">FIFA Mundial 218</string>
+    <string name="asiancup2019">AFC Asian cup 2019</string>
+    <string name="african2019">CAF African cup 2019</string>
+    <string name="confederation">FIFA Confederations  2017</string>
+    <string name="u20worlcup">FIFA U-20 World Cup </string>
+    <string name="toulon">Toulon Youth festival</string>
+    <string name="championu21">UEFA U-21 Championships</string>
+    <string name="championwom">UEFA Women Championships</string>
+    <string name="nothamerica">AMERICA NORTE</string>
+    <string name="india">INDIA</string>
 
 </resources>

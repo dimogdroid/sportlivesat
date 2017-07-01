@@ -210,6 +210,15 @@ public class TestAsiaViewAdapter extends RecyclerView.Adapter<TestAsiaViewAdapte
                 holder.imgcard.setImageBitmap(icon);
                 holder.txtpais.setText("coreasur");
                 break;
+            case 10:
+                holder.txttitulo.setText(context.getString(R.string.india));
+
+                //holder.imgcard.setImageResource(R.drawable.corea);
+                icon = BitmapFactory.decodeResource(context.getResources(),
+                        R.drawable.india, options);
+                holder.imgcard.setImageBitmap(icon);
+                holder.txtpais.setText("india");
+                break;
 
 
         }

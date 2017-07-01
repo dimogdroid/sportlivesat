@@ -132,15 +132,15 @@ public class TestEuropaViewAdapter extends RecyclerView.Adapter<TestEuropaViewAd
         options.inSampleSize = 3;
         options.inPurgeable = true;
         switch ((position)) {
-            case 0:
-                holder.txttitulo.setText(context.getString(R.string.eurocopa));
-                holder.txtpais.setText("eurocopa");
+           // case 0:
+               // holder.txttitulo.setText(context.getString(R.string.eurocopa));
+               // holder.txtpais.setText("eurocopa");
                 //holder.imgcard.setImageResource(R.drawable.eurocopa);
-                icon = BitmapFactory.decodeResource(context.getResources(),
-                        R.drawable.eurocopa, options);
-                holder.imgcard.setImageBitmap(icon);
-                break;
-            case 1:
+              //  icon = BitmapFactory.decodeResource(context.getResources(),
+              //          R.drawable.eurocopa, options);
+               // holder.imgcard.setImageBitmap(icon);
+            //    break;
+            case 0:
                 holder.txttitulo.setTextSize(20);
                 holder.txttitulo.setText(context.getString(R.string.champion));
                 holder.txtpais.setText("champion");
@@ -149,7 +149,7 @@ public class TestEuropaViewAdapter extends RecyclerView.Adapter<TestEuropaViewAd
                         R.drawable.champion, options);
                 holder.imgcard.setImageBitmap(icon);
                 break;
-            case 2:
+            case 1:
                 holder.txttitulo.setTextSize(22);
                 holder.txttitulo.setText(context.getString(R.string.europaleague));
                 holder.txtpais.setText("europaleague");
@@ -158,7 +158,7 @@ public class TestEuropaViewAdapter extends RecyclerView.Adapter<TestEuropaViewAd
                         R.drawable.uefa, options);
                 holder.imgcard.setImageBitmap(icon);
                 break;
-            case 3:
+            case 2:
                 holder.txttitulo.setText(context.getString(R.string.espana));
                 holder.txtpais.setText("esp");
                 //holder.imgcard.setImageResource(R.drawable.esp);
@@ -166,7 +166,7 @@ public class TestEuropaViewAdapter extends RecyclerView.Adapter<TestEuropaViewAd
                         R.drawable.esp, options);
                 holder.imgcard.setImageBitmap(icon);
                 break;
-            case 4:
+            case 3:
                 holder.txttitulo.setText(context.getString(R.string.uk));
                 holder.txtpais.setText("uk");
                 //holder.imgcard.setImageResource(R.drawable.ukireland);
@@ -174,7 +174,7 @@ public class TestEuropaViewAdapter extends RecyclerView.Adapter<TestEuropaViewAd
                         R.drawable.ukireland, options);
                 holder.imgcard.setImageBitmap(icon);
                 break;
-            case 5:
+            case 4:
                 holder.txttitulo.setText(context.getString(R.string.portugal));
                 //holder.imgcard.setImageResource(R.drawable.portugal);
                 icon = BitmapFactory.decodeResource(context.getResources(),
@@ -182,7 +182,7 @@ public class TestEuropaViewAdapter extends RecyclerView.Adapter<TestEuropaViewAd
                 holder.imgcard.setImageBitmap(icon);
                 holder.txtpais.setText("por");
                 break;
-            case 6:
+            case 5:
                 holder.txttitulo.setTextSize(23);
                 holder.txttitulo.setText(context.getString(R.string.alemania));
                // holder.imgcard.setImageResource(R.drawable.alemania);
@@ -191,7 +191,7 @@ public class TestEuropaViewAdapter extends RecyclerView.Adapter<TestEuropaViewAd
                 holder.imgcard.setImageBitmap(icon);
                 holder.txtpais.setText("ger");
                 break;
-            case 7:
+            case 6:
                 holder.txttitulo.setText(context.getString(R.string.francia));
                // holder.imgcard.setImageResource(R.drawable.francia);
                 icon = BitmapFactory.decodeResource(context.getResources(),
@@ -199,7 +199,7 @@ public class TestEuropaViewAdapter extends RecyclerView.Adapter<TestEuropaViewAd
                 holder.imgcard.setImageBitmap(icon);
                 holder.txtpais.setText("fra");
                 break;
-            case 8:
+            case 7:
                 holder.txttitulo.setText(context.getString(R.string.italia));
                // holder.imgcard.setImageResource(R.drawable.italia);
                 icon = BitmapFactory.decodeResource(context.getResources(),
@@ -207,7 +207,7 @@ public class TestEuropaViewAdapter extends RecyclerView.Adapter<TestEuropaViewAd
                 holder.imgcard.setImageBitmap(icon);
                 holder.txtpais.setText("ita");
                 break;
-            case 9:
+            case 8:
                 holder.txttitulo.setText(context.getString(R.string.holanda));
                // holder.imgcard.setImageResource(R.drawable.holanda);
                 icon = BitmapFactory.decodeResource(context.getResources(),
@@ -215,7 +215,7 @@ public class TestEuropaViewAdapter extends RecyclerView.Adapter<TestEuropaViewAd
                 holder.imgcard.setImageBitmap(icon);
                 holder.txtpais.setText("ned");
                 break;
-            case 10:
+            case 9:
                 holder.txttitulo.setText(context.getString(R.string.polonia));
                 //holder.imgcard.setImageResource(R.drawable.polonia);
                 icon = BitmapFactory.decodeResource(context.getResources(),
@@ -223,7 +223,7 @@ public class TestEuropaViewAdapter extends RecyclerView.Adapter<TestEuropaViewAd
                 holder.imgcard.setImageBitmap(icon);
                 holder.txtpais.setText("pol");
                 break;
-            case 11:
+            case 10:
                 holder.txttitulo.setText(context.getString(R.string.grecia));
                 //holder.imgcard.setImageResource(R.drawable.grecia);
                 icon = BitmapFactory.decodeResource(context.getResources(),
@@ -231,7 +231,7 @@ public class TestEuropaViewAdapter extends RecyclerView.Adapter<TestEuropaViewAd
                 holder.imgcard.setImageBitmap(icon);
                 holder.txtpais.setText("gre");
                 break;
-            case 12:
+            case 11:
                 holder.txttitulo.setText(context.getString(R.string.rusia));
               //  holder.imgcard.setImageResource(R.drawable.rusia);
                 icon = BitmapFactory.decodeResource(context.getResources(),
@@ -239,7 +239,7 @@ public class TestEuropaViewAdapter extends RecyclerView.Adapter<TestEuropaViewAd
                 holder.imgcard.setImageBitmap(icon);
                 holder.txtpais.setText("urusk");
                 break;
-            case 13:
+            case 12:
                 holder.txttitulo.setText(context.getString(R.string.turquia));
                 //holder.imgcard.setImageResource(R.drawable.turquia);
                 icon = BitmapFactory.decodeResource(context.getResources(),
@@ -247,7 +247,7 @@ public class TestEuropaViewAdapter extends RecyclerView.Adapter<TestEuropaViewAd
                 holder.imgcard.setImageBitmap(icon);
                 holder.txtpais.setText("tur");
                 break;
-            case 14:
+            case 13:
                 holder.txttitulo.setText(context.getString(R.string.austria));
                // holder.imgcard.setImageResource(R.drawable.austria);
                 icon = BitmapFactory.decodeResource(context.getResources(),

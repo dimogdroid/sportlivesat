@@ -23,7 +23,7 @@ public class InternacionalViewFragment extends Fragment {
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
 
-    private static final int ITEM_COUNT = 3;
+    private static final int ITEM_COUNT = 10;
 
     private List<Object> mContentItems = new ArrayList<>();
 

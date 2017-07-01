@@ -23,7 +23,7 @@ public class AmericaViewFragment extends Fragment {
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
 
-    private static final int ITEM_COUNT = 9;
+    private static final int ITEM_COUNT = 10;
 
     private List<Object> mContentItems = new ArrayList<>();
 

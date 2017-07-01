@@ -21,6 +21,7 @@ import com.google.android.gms.ads.InterstitialAd;
 
 import cn.pedant.SweetAlert.SweetAlertDialog;
 import difed.entidades.Partidos;
+import difed.util.Publicidad;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -216,6 +217,14 @@ public class MainActivity extends AppCompatActivity {
         }
 
         // PUBLICIDAD
+        SharedPreferences settings = getSharedPreferences("perfil",
+                Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = settings.edit();
+        editor.putInt("mostrarPublicidad", 0);
+        editor.commit();
+        //Publicidad publicidad = Publicidad.getPublicidad(context);
+
+
       //  interstitial = new InterstitialAd(this);
       //  interstitial.setAdUnitId(AD_UNIT_ID);
 
@@ -233,8 +242,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         //Comprobamos si tenemos gmz para lanzar el config
-        SharedPreferences settings = getSharedPreferences("perfil",
-                Context.MODE_PRIVATE);
+
         gmzpuesto = settings.getInt("gmzpuesto", 0);
         sGmz = settings.getString("gmz", "");
 
@@ -291,7 +299,6 @@ public class MainActivity extends AppCompatActivity {
         if (googleplay<=3){ //sumar1
 
             googleplay = googleplay + 1;
-            SharedPreferences.Editor editor = settings.edit();
             editor.putInt("googleplay",googleplay);
             editor.commit();
 
@@ -300,7 +307,6 @@ public class MainActivity extends AppCompatActivity {
         //Novedades en MAS
         if (novedades==0){//lanzar
             novedades = novedades + 1;
-            SharedPreferences.Editor editor = settings.edit();
             editor.putInt("novedades",novedades);
             editor.commit();
             new SweetAlertDialog(this, SweetAlertDialog.WARNING_TYPE)

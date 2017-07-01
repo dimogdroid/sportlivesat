@@ -23,7 +23,7 @@ public class EuropaViewFragment extends Fragment {
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
 
-    private static final int ITEM_COUNT = 15;
+    private static final int ITEM_COUNT = 14;
 
     private List<Object> mContentItems = new ArrayList<>();
 

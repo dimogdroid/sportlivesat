@@ -205,6 +205,15 @@ public class TestAmericaViewAdapter extends RecyclerView.Adapter<TestAmericaView
                 holder.imgcard.setImageBitmap(icon);
                 holder.txtpais.setText("mex");
                 break;
+            case 9:
+                holder.txttitulo.setText(context.getString(R.string.nothamerica));
+                holder.txttitulo.setTextSize(22);
+                // holder.imgcard.setImageResource(R.drawable.mexico);
+                icon = BitmapFactory.decodeResource(context.getResources(),
+                        R.drawable.nothamerica, options);
+                holder.imgcard.setImageBitmap(icon);
+                holder.txtpais.setText("nothamerica");
+                break;
 
 
         }

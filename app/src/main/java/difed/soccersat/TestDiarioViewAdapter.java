@@ -1,7 +1,9 @@
 package difed.soccersat;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Typeface;
@@ -19,6 +21,8 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
+
+import difed.util.Publicidad;
 
 /**
  * Created by florentchampigny on 24/04/15.
@@ -49,7 +53,6 @@ public class TestDiarioViewAdapter extends RecyclerView.Adapter<TestDiarioViewAd
         public TextView txtpais;
         Typeface tf_regular;
         public ImageView imgcard;
-
 
 
 
@@ -89,28 +92,16 @@ public class TestDiarioViewAdapter extends RecyclerView.Adapter<TestDiarioViewAd
     public AnimeViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
 
         View view = null;
-
-    /*    switch (viewType) {
-            case TYPE_HEADER: {
-                view = LayoutInflater.from(viewGroup.getContext())
-                        .inflate(R.layout.list_item_card_big, viewGroup, false);
-                return new AnimeViewHolder(view) {
-                };
-            }
-            case TYPE_CELL: {/**/
-                view = LayoutInflater.from(viewGroup.getContext())
+        view = LayoutInflater.from(viewGroup.getContext())
                         .inflate(R.layout.list_item_card_small, viewGroup, false);
                 return new AnimeViewHolder(view) {
                 };
-           // }
-       // }
-       // return null;
+
     }
 
 
     @Override
     public void onBindViewHolder(final AnimeViewHolder  holder, int position) {
-
 
 
         holder.cardView.setOnClickListener(new View.OnClickListener() {

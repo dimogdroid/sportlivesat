@@ -153,6 +153,70 @@ public class TestInternacionalViewAdapter extends RecyclerView.Adapter<TestInter
                         R.drawable.amistosowomen, options);
                 holder.imgcard.setImageBitmap(icon);
                 break;
+            case 3:
+                holder.txttitulo.setTextSize(20);
+                holder.txttitulo.setText(context.getString(R.string.russia2018));
+                holder.txtpais.setText("russia2018");
+                //holder.imgcard.setImageResource(R.drawable.amistosowomen);
+                icon = BitmapFactory.decodeResource(context.getResources(),
+                        R.drawable.wc2018, options);
+                holder.imgcard.setImageBitmap(icon);
+                break;
+            case 4:
+                holder.txttitulo.setTextSize(20);
+                holder.txttitulo.setText(context.getString(R.string.asiancup2019));
+                holder.txtpais.setText("asiancup2019");
+                //holder.imgcard.setImageResource(R.drawable.amistosowomen);
+                icon = BitmapFactory.decodeResource(context.getResources(),
+                        R.drawable.afcasia, options);
+                holder.imgcard.setImageBitmap(icon);
+                break;
+            case 5:
+                holder.txttitulo.setTextSize(20);
+                holder.txttitulo.setText(context.getString(R.string.african2019));
+                holder.txtpais.setText("african2019");
+                //holder.imgcard.setImageResource(R.drawable.amistosowomen);
+                icon = BitmapFactory.decodeResource(context.getResources(),
+                        R.drawable.african2019, options);
+                holder.imgcard.setImageBitmap(icon);
+                break;
+            case 6:
+                holder.txttitulo.setTextSize(20);
+                holder.txttitulo.setText(context.getString(R.string.confederation));
+                holder.txtpais.setText("confederation");
+                //holder.imgcard.setImageResource(R.drawable.amistosowomen);
+                icon = BitmapFactory.decodeResource(context.getResources(),
+                        R.drawable.confederation, options);
+                holder.imgcard.setImageBitmap(icon);
+                break;
+            case 7:
+                holder.txttitulo.setTextSize(20);
+                holder.txttitulo.setText(context.getString(R.string.u20worlcup));
+                holder.txtpais.setText("u20worlcup");
+                //holder.imgcard.setImageResource(R.drawable.amistosowomen);
+                icon = BitmapFactory.decodeResource(context.getResources(),
+                        R.drawable.u20worlcup, options);
+                holder.imgcard.setImageBitmap(icon);
+                break;
+
+            case 8:
+                holder.txttitulo.setTextSize(20);
+                holder.txttitulo.setText(context.getString(R.string.championu21));
+                holder.txtpais.setText("championu21");
+                //holder.imgcard.setImageResource(R.drawable.amistosowomen);
+                icon = BitmapFactory.decodeResource(context.getResources(),
+                        R.drawable.championu21, options);
+                holder.imgcard.setImageBitmap(icon);
+                break;
+            case 9:
+                holder.txttitulo.setTextSize(20);
+                holder.txttitulo.setText(context.getString(R.string.championwom));
+                holder.txtpais.setText("championwom");
+                //holder.imgcard.setImageResource(R.drawable.amistosowomen);
+                icon = BitmapFactory.decodeResource(context.getResources(),
+                        R.drawable.championwom, options);
+                holder.imgcard.setImageBitmap(icon);
+                break;
 
         }
     }

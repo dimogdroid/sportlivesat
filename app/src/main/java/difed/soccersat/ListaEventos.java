@@ -52,9 +52,6 @@ import pl.polidea.view.ZoomView;
 public class ListaEventos extends Activity {
     //Bueno. Banner
     private static final String MY_AD_UNIT_ID = "ca-app-pub-7866637665636353/8934999021";
-    //para programacion
-    //private static final String MY_AD_UNIT_ID = "245D7901D683E021EDC7CC0CEA869DFC";
-
     private static final String AD_UNIT_ID = "ca-app-pub-7866637665636353/8579016620";
 
     private InterstitialAd interstitial;
@@ -208,14 +205,7 @@ public class ListaEventos extends Activity {
             adapter = new HorariosAdapter(this,
                     (ArrayList<FechaPartidos>) paispartidos.getLpartidos());
 
-
-
-
             ExpandableListView listview = expandableListView;
-
-
-
-
 
             listview.setAdapter(adapter);
 
@@ -227,7 +217,7 @@ public class ListaEventos extends Activity {
                             childPosition);
 
                     selectItem(selected);
-                    if (mostrarPublicidad==1){
+                    if (mostrarPublicidad==0){
                         displayInterstitial();
                     }
 

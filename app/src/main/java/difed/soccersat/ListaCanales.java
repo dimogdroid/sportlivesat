@@ -416,7 +416,7 @@ public class ListaCanales extends Activity {
 					lfrecuencias = c.getlFrecuencias();
 					for (Frecuencias f : lfrecuencias) {
 
-						if (seletedItems.contains(f.getSatelite())) {
+						if (seletedItems.contains(f.getSatelite() + " (" + f.getPosicion() + ")")) {
 							canalConFrecuencia = true;
 							lfrecuenciasAux.add(f);
 						}
@@ -481,8 +481,8 @@ public class ListaCanales extends Activity {
 				lfrecuencias = c.getlFrecuencias();
 				for (Frecuencias f : lfrecuencias) {
 
-					if (!listItems.contains(c.getlFrecuencias().get(0).getPosicion() + " " + f.getSatelite())) {
-						listItems.add(c.getlFrecuencias().get(0).getPosicion() + " " + f.getSatelite());
+					if (!listItems.contains(f.getSatelite() + " (" + f.getPosicion() + ")")) {
+						listItems.add(f.getSatelite() + " (" + f.getPosicion() + ")");
 					}
 				}
 			}

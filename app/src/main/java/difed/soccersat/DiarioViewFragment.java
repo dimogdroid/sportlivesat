@@ -1,5 +1,7 @@
 package difed.soccersat;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -11,14 +13,22 @@ import android.view.ViewGroup;
 
 import com.github.florent37.materialviewpager.MaterialViewPagerHelper;
 import com.github.florent37.materialviewpager.adapter.RecyclerViewMaterialAdapter;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import difed.util.Publicidad;
 
 /**
  * Created by florentchampigny on 24/04/15.
  */
 public class DiarioViewFragment extends Fragment {
+
+    private static final String AD_UNIT_ID = "ca-app-pub-7866637665636353/8579016620";
+
+    private InterstitialAd interstitial;
 
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
@@ -54,5 +64,7 @@ public class DiarioViewFragment extends Fragment {
         }
 
         MaterialViewPagerHelper.registerRecyclerView(getActivity(), mRecyclerView, null);
+
+
     }
 }
